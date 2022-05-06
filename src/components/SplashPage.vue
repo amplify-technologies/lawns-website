@@ -2,14 +2,18 @@
   <v-main>
 
     <v-container
-      class="fill-height"
+      id="fairway"
+      fluid
+      class="fill-height pl-0"
     >
       <v-app-bar
         absolute
-        color="grey"
+        color="teal darken-1"
       >
         
-        <v-toolbar-title>
+        <v-toolbar-title
+          class=" grey--text text--lighten-5"
+        >
           Charity Golf Solutions
         </v-toolbar-title>
         
@@ -19,7 +23,13 @@
 
       </v-app-bar>
 
-      <div class="text-h3" color="grey">Your fairway to fundraising</div>
+      <v-card
+        tile
+        class="text-h4 font-weight-bold pa-2 pl-16 ml-0 grey--text text--lighten-5"
+        color="teal darken-1"
+      >
+        Your fairway to fundraising
+      </v-card>
 
     </v-container>
 
@@ -45,3 +55,10 @@
     data: () => ({}),
   }
 </script>
+
+<style>
+  #fairway {
+    background: url('../assets/fairway.jpg');
+    background-size: cover;
+  }
+</style>
