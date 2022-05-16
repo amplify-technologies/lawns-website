@@ -30,6 +30,7 @@
           color="white"
           class="text-capitalize ma-2"
           width="120px"
+          @click="$vuetify.goTo('#pricing', {duration: 0})"
         >Pricing</v-btn>
 
         <v-btn
