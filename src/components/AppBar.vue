@@ -16,19 +16,24 @@
         <v-btn
           text
           color="white"
+          class="text-capitalize"
         >Features</v-btn>
 
         <v-btn
           text
           color="white"
+          class="text-capitalize"
         >Pricing</v-btn>
 
         <v-btn
           text
           color="white"
+          class="text-capitalize"
         >Sign In</v-btn>
 
-        <v-btn>Try for free</v-btn>
+        <v-btn
+          class="text-capitalize"
+        >Try for free</v-btn>
 
       </v-app-bar>
 </template>
