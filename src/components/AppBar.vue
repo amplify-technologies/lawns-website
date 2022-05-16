@@ -21,6 +21,7 @@
           color="white"
           class="text-capitalize ma-2"
           width="120px"
+          @click="$vuetify.goTo('#features', {duration: 0})"
         >Features</v-btn>
 
         <v-btn
