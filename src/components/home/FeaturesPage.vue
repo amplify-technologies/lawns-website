@@ -68,9 +68,6 @@
                   </v-btn>
                 </v-col>
 
-              </v-row>
-              <v-row>
-
                 <v-col>
                   <v-btn
                     width="100%"
