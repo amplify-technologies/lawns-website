@@ -13,7 +13,6 @@
         color="transparent"
         flat
       >
-
         <v-card
           height="250px"
           color="transparent"
@@ -26,10 +25,13 @@
           elevation=0
           class="text-h5 font-weight-bold pl-16 ml-16 grey--text text--lighten-5"
         >
+
           <p
             class="text-h3"
           >Job Management for Pros</p>
+
           <p>No matter the business, Amplify will get you there</p>
+
           <v-btn
             color="white"
             class="mr-5 text-capitalize"
@@ -38,12 +40,14 @@
             Open Amplify
             <v-icon>mdi-open-in-new</v-icon>
           </v-btn>
+
           <v-btn
             color="white"
             outlined
             class="text-capitalize"
             width="140"
           >Pricing</v-btn>
+          
         </v-card>
 
       </v-card>

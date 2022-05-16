@@ -1,17 +1,17 @@
 <template>
   <div>
 
-    <splash-page />
+    <landing-page />
 
   </div>
 </template>
 
 <script>
-import SplashPage from './SplashPage.vue'
+import LandingPage from './LandingPage.vue'
 export default {
 
   components: {
-    SplashPage
+    LandingPage
   }
 
 }
