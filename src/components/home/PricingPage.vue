@@ -4,6 +4,7 @@
     :src="require('@/assets/pricing.jpg')"
     class="py-16"
     fluid
+    :max-height="$vuetify.breakpoint.lg ? 800 : 'initial'"
   >
     <v-container
       class="align-content-center fill-height"
