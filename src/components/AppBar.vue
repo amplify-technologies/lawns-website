@@ -7,11 +7,11 @@
         class="pt-5 px-16"
       >
         <v-img
-          :src="require('@/assets/logo.jpg')"
-          max-height="60"
+          :src="require('@/assets/amplify_logo.svg')"
+          max-height="40"
           contain
           position="left"
-        ></v-img>
+        />
         
         <v-spacer></v-spacer>
 

@@ -1,7 +1,7 @@
 <template>
   <v-img
     id="features"
-    :src="require('@/assets/features.jpg')"
+    :src="require('@/assets/features.png')"
   >
     <v-container
       class="align-content-center fill-height"
