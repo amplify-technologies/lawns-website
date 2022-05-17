@@ -45,6 +45,7 @@
               outlined
               class="text-capitalize"
               width="140"
+              @click="$vuetify.goTo('#pricing', {duration: 0})"
             >Pricing</v-btn>
             
           </v-card>
