@@ -13,6 +13,8 @@
 
     <stay-on-top />
 
+    <runs-on-everything />
+
   </div>
 </template>
 
@@ -24,6 +26,7 @@ import OrganizePage from './OrganizePage.vue'
 
 import BookkeepingPage from './BookkeepingPage.vue'
 import StayOnTop from './StayOnTop.vue'
+import RunsOnEverything from './RunsOnEverything.vue'
 export default {
 
   components: {
@@ -32,7 +35,8 @@ export default {
     PricingPage,
     OrganizePage,
     BookkeepingPage,
-    StayOnTop
+    StayOnTop,
+    RunsOnEverything
   }
 
 }

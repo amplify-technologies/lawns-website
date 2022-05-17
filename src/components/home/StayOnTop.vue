@@ -1,8 +1,9 @@
 <template>
   <v-img
-    :src="require('@/assets/features_lines.png')"
+    :src="require('@/assets/stay_on.png')"
     fluid
     class="pa-2"
+    :max-height="$vuetify.breakpoint.lg ? 700 : 'initial'"
   >
     <v-container
       fluid
