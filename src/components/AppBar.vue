@@ -4,7 +4,7 @@
     color="transparent"
     elevation=0
     hide-on-scroll
-    class="pt-5 px-16"
+    class="pt-5 px-sm-16"
   >
 
     <v-img
@@ -39,7 +39,7 @@
       x-large
       text
       color="white"
-      class="text-capitalize ma-2"
+      class="text-capitalize ma-2 d-none d-sm-block"
       width="120px"
     >Sign In</v-btn>
 
