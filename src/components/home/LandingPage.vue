@@ -3,7 +3,7 @@
 
     <v-img
       fluid
-      class="pl-0 d-flex"
+      class="pl-0"
       :src="require('@/assets/splash.jpeg')"
       max-height="100vh"
     >
@@ -13,43 +13,41 @@
         color="transparent"
         flat
       >
-        <v-card
-          height="250px"
-          color="transparent"
-          flat
-        ></v-card>
 
-        <v-card
-          tile
-          color="transparent"
-          elevation=0
-          class="text-h5 font-weight-bold pl-16 ml-16 grey--text text--lighten-5"
+        <v-container
+         class="align-content-center fill-height"
         >
-
-          <p
-            class="text-h3"
-          >Job Management for Pros</p>
-
-          <p>No matter the business, Amplify will get you there</p>
-
-          <v-btn
-            color="white"
-            class="mr-5 text-capitalize"
-            width="140"
+          <v-card
+            tile
+            color="transparent"
+            elevation=0
+            class="text-h5 font-weight-bold grey--text text--lighten-5"
           >
-            Open Amplify
-            <v-icon>mdi-open-in-new</v-icon>
-          </v-btn>
 
-          <v-btn
-            color="white"
-            outlined
-            class="text-capitalize"
-            width="140"
-          >Pricing</v-btn>
-          
-        </v-card>
+            <p
+              class="text-h3"
+            >Job Management for Pros</p>
 
+            <p>No matter the business, Amplify will get you there</p>
+
+            <v-btn
+              color="white"
+              class="mr-5 text-capitalize"
+              width="140"
+            >
+              Open Amplify
+              <v-icon>mdi-open-in-new</v-icon>
+            </v-btn>
+
+            <v-btn
+              color="white"
+              outlined
+              class="text-capitalize"
+              width="140"
+            >Pricing</v-btn>
+            
+          </v-card>
+        </v-container>
       </v-card>
     </v-img>
 
