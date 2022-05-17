@@ -12,22 +12,22 @@
         class="justify-center"
       >
 
-        <p
-          class="text-h4 text-center font-weight-bold"
+        <v-card-title
+          class="text-h5 text-center font-weight-bold"
         >
           Book-Keeping made easy
-        </p>
+        </v-card-title>
 
       </v-row>
       <v-row
         class="justify-center mb-10"
       >
 
-        <p
-          class="text-h5 text-center font-weight-bold"
+        <v-card-text
+          class="text-body-1 text-center pa-0"
         >
           Send Bills, Quote, and Pay all in one place
-        </p>
+        </v-card-text>
 
       </v-row>
       <v-row
@@ -60,7 +60,7 @@
             size="60"
             color="primary"
           >
-            mdi-baguette
+            mdi-currency-usd
           </v-icon>
         </v-img>
 
@@ -75,7 +75,7 @@
             size="60"
             color="primary"
           >
-            mdi-card-multiple-outline
+            mdi-wallet
           </v-icon>
         </v-img>
 
