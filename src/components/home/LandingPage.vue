@@ -4,7 +4,7 @@
     <v-img
       fluid
       class="pl-0"
-      :src="require('@/assets/splash.jpeg')"
+      :src="require('@/assets/landing.jpeg')"
       max-height="100vh"
     >
       <v-card
