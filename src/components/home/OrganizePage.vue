@@ -3,7 +3,6 @@
     fluid
     class="pa-0"
     >
-
         <v-img
             :src="require('@/assets/organize.png')"
             max-height="1200"
