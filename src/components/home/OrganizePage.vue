@@ -1,6 +1,11 @@
 <template>
-  <v-container>
-      <v-img :src="require('@/assets/bubbles_1.png')">
+  <v-container
+    fluid
+    class="pa-0"
+  >
+        <v-img
+            :src="require('@/assets/bubbles_1.png')"
+        >
         <v-row>
             <v-col cols="6">
                 <v-card-title>
@@ -10,13 +15,21 @@
                     Write out and complete all your Jobs from start to finish
                 </v-card-text>
             </v-col>
-            <v-col cols="6">
-                <v-img :src="require('@/assets/browser_angled.png')" />
+            <v-col
+                cols="6"
+            >
+                <v-img
+                    :src="require('@/assets/browser_angled.png')"
+                    width="400"
+                />
             </v-col>
         </v-row>
         <v-row>
             <v-col cols="6">
-                <v-img :src="require('@/assets/phone.png')" />
+                <v-img
+                    :src="require('@/assets/phone.png')"
+                    width="400"
+                />
             </v-col>
             <v-col cols="6">
                 <v-card-title>
