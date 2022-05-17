@@ -4,7 +4,7 @@
     color="transparent"
     elevation=0
     hide-on-scroll
-    :class="$vuetify.breakpoint.smAndUp ? 'pt-5 px-16' : 'pt-5'"
+    class="pt-5 px-sm-16"
   >
 
     <v-img
