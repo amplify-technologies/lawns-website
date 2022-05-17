@@ -1,6 +1,6 @@
 <template>
   <v-img
-    :src="require('@/assets/blue_waves.png')"
+    :src="require('@/assets/features_lines.png')"
     fluid
     class="pa-2"
   >
