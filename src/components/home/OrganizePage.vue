@@ -5,37 +5,48 @@
     >
         <v-img
             :src="require('@/assets/organize.png')"
-            max-height="1200"
+            :max-height="$vuetify.breakpoint.mdAndUp ? 1200 : 'initial'"
         >
-            <v-row no-gutters>
+            <v-row
+              no-gutters
+              class="flex-column flex-md-row align-content-center"
+            >
                 <v-col
-                    cols="6"
+                    cols-md="6"
                     class="d-flex flex-column justify-center align-center"
+                    order="1"
                 >   
-                    <div :class="$vuetify.breakpoint.mdAndDown? 'pl-6' : 'pl-16'">
-                        <v-card-title class="text-h5 font-weight-bold">
-                            Organize, and Schedule
-                        </v-card-title>
+                    <div :class="$vuetify.breakpoint.mdAndDown? 'px-6 py-16' : 'px-16'">
+                        <p class="px-4 mb-0 text-h5 font-weight-bold">
+                            Organize and Schedule
+                        </p>
                         <v-card-text>
                             Write out and complete all your Jobs from start to finish
                         </v-card-text>
                     </div>
                 </v-col>
                 <v-col
-                    cols="6"
-                    class="d-flex flex-column align-center"
+                    cols-md="6"
+                    class="d-flex flex-column justify-center align-center"
+                    order="2"
                 >
                     <v-img
                         :src="require('@/assets/browser_angled.png')"
                         width="400"
+                        max-width="100%"
                         :style="`transform: ${$vuetify.breakpoint.mdAndDown? 'translate(20px, 0px) scale(1.2);' : 'translate(0px, 100px) scale(1.4);'}`"
                     />
                 </v-col>
             </v-row>
-            <v-row no-gutters>
+            <v-row
+              no-gutters
+              class="flex-column flex-md-row align-content-center"
+            >
                 <v-col
-                    cols="6"
-                    class="d-flex flex-column align-center"
+                    cols-md="6"
+                    class="d-flex flex-column justify-center align-center"
+                    order="4"
+                    order-md="3"
                 >
                     <v-img
                         :src="require('@/assets/phone.png')"
@@ -45,15 +56,17 @@
                     />
                 </v-col>
                 <v-col
-                    cols="6"
-                    class="d-flex flex-column justify-center"
+                    cols-md="6"
+                    class="d-flex flex-column justify-center align-center"
+                    order="3"
+                    order-md="4"
                 >
-                    <div :class="$vuetify.breakpoint.mdAndDown? 'pr-6' : 'pr-16'">
-                        <v-card-title class="text-h5 font-weight-bold">
+                    <div :class="$vuetify.breakpoint.mdAndDown? 'px-6 py-16' : 'px-16'">
+                        <p class="px-4 mb-0 text-h5 font-weight-bold">
                             Customer Service at its best.
-                        </v-card-title>
+                        </p>
                         <v-card-text>
-                            our system manages client to client messages so your customers wont ever be left uninformed. Amplify comes with email notifications to keep every one on track
+                            Our system manages client to client messages so your customers won't ever be left uninformed. Amplify comes with email notifications to keep everyone on track
                         </v-card-text>
                     </div>
                 </v-col>
