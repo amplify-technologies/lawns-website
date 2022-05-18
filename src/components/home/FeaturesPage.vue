@@ -1,47 +1,57 @@
 <template>
   <v-img id="features" :src="require('@/assets/features.png')">
     <v-container class="align-content-center fill-height">
+      <v-card-title class="text-h5 font-weight-bold mb-2"
+        >List of Features</v-card-title
+      >
+      <v-card-text class="text-body mb-10 text-justify">
+        Amplify lets you create Jobs from templates, assign clients to them,
+        schedule when they happen and send invoices when they’re done. On top of
+        that it comes with in-app messaging to keep in touch with your
+        customers.
+      </v-card-text>
       <v-row>
         <v-col md="8">
-          <v-card flat color="transparent">
-            <p class="text-h5 font-weight-bold mb-2">List of Features</p>
-
-            <p class="text-body mb-10">
-              Amplify lets you create Jobs from templates, assign clients to
-              them, schedule when they happen and send invoices when they’re
-              done. On top of that it comes with in-app messaging to keep in
-              touch with your customers.
-            </p>
-
-            <v-row class="d-flex flex-smAndDown-column">
-              <v-col v-for="(item, i) in features" :key="i">
-                <v-btn
-                  width="100%"
-                  outlined
-                  class="text-capitalize"
-                  x-large
-                  @click="carousel = i"
-                >
-                  {{ item.title }}
-                  <v-spacer></v-spacer>
-                  <v-icon>{{ item.icon }}</v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-card>
+          <v-row class="d-flex flex-smAndDown-column align-center">
+            <v-col
+              v-for="(item, i) in features"
+              :key="i"
+              class="d-flex justify-center"
+            >
+              <v-btn
+                width="100%"
+                outlined
+                class="text-capitalize"
+                @click="carousel = i"
+                large=""
+              >
+                {{ item.title }}
+                <v-spacer></v-spacer>
+                <v-icon>{{ item.icon }}</v-icon>
+              </v-btn>
+            </v-col>
+          </v-row>
+          <v-card-subtitle>
+            <v-icon>mdi-gesture-tap</v-icon>
+            Click on a feature for more info
+          </v-card-subtitle>
         </v-col>
 
         <v-col md="4">
           <v-carousel
             vertical
             :show-arrows="false"
-            hide-delimiter-background
             hide-delimiters
             v-model="carousel"
+            class="d-flex align-center"
           >
             <v-carousel-item v-for="(item, i) in features" :key="i">
-              <p class="text-h5 mb-2 font-weight-bold">{{ item.title }}</p>
-              <p class="text-body-1 font-weight-medium">{{ item.desc }}</p>
+              <v-card-title class="font-weight-bold">
+                {{ item.title }}
+              </v-card-title>
+              <v-card-text class="text-body-1">
+                {{ item.desc }}
+              </v-card-text>
             </v-carousel-item>
           </v-carousel>
         </v-col>
