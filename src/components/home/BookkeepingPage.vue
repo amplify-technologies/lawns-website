@@ -14,11 +14,11 @@
         <v-row
           class="justify-center"
         >
-        <v-card-title
-          class="text-h5 text-center font-weight-bold"
+        <h5
+          class="text-h5 mb-4 text-center font-weight-bold"
         >
           Book-Keeping made easy
-        </v-card-title>
+        </h5>
           <v-card-text
             class="text-body-1 text-center pa-0"
           >
