@@ -6,7 +6,7 @@
       >
       <v-card-text class="text-body mb-10 text-justify">
         Amplify lets you create Jobs from templates, assign clients to them,
-        schedule when they happen and send invoices when they’re done. On top of
+        schedule when they happen, and send invoices when they’re done. On top of
         that it comes with in-app messaging to keep in touch with your
         customers.
       </v-card-text>
@@ -41,11 +41,11 @@
                 class="d-flex flex-column align-center justify-center"
                 outlined
                 height="100%"
-                min-width="100%"
+                width="100%"
               >
-                <v-card-title class="font-weight-bold">
+                <h4 class="text-h6 mb-4 text-center font-weight-bold">
                   {{ item.title }}
-                </v-card-title>
+                </h4>
                 <v-icon>{{ item.icon }}</v-icon>
                 <v-card-text class="text-body-1 text-center">
                   {{ item.desc }}
