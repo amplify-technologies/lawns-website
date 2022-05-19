@@ -17,7 +17,7 @@
         >
 
           <p
-            class="text-h4 text-center white--text font-weight-bold"
+            class="text-h4 px-4 text-center white--text font-weight-bold"
           >
             Get up and running real fast
           </p>
