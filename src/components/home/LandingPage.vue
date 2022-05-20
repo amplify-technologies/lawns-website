@@ -1,5 +1,5 @@
 <template>
-  <v-main>
+  <v-sheet fluid>
 
     <v-img
       fluid
@@ -53,7 +53,7 @@
       </v-card>
     </v-img>
 
-  </v-main>
+  </v-sheet>
 </template>
 
 <script>

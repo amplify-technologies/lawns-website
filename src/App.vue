@@ -3,7 +3,11 @@
 
     <app-bar />
 
-    <router-view />
+    <v-main>
+
+      <router-view />
+      
+    </v-main>
 
     <footer-bar />
     
