@@ -32,6 +32,7 @@
                 >
                     <v-img
                         :src="require('@/assets/browser_angled.png')"
+                        :aspect-ratio="4/5"
                         width="400"
                         max-width="100%"
                         :style="`transform: ${$vuetify.breakpoint.mdAndDown? 'translate(20px, 0px) scale(1.2);' : 'translate(0px, 100px) scale(1.4);'}`"
@@ -51,6 +52,7 @@
                     <v-img
                         :src="require('@/assets/phone.png')"
                         width="400"
+                        :aspect-ratio="1421/2013"
                         :style="`transform: ${$vuetify.breakpoint.mdAndDown? 'translate(-10px, -30px) scale(1.1);' : 'translate(0px, 0px) scale(1.2);'}`"
 
                     />
