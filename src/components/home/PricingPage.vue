@@ -150,7 +150,7 @@ methods: {
     var pricing = document.getElementById('pricing');
     if(pricing.offsetTop < window.scrollY + (pricing.scrollHeight / 2)) {
       this.reveal = true;
-      setTimeout(() => this.reveal2 = true, 300);
+      setTimeout(() => this.reveal2 = true, 500);
     }
   }
 },
