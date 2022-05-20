@@ -13,14 +13,15 @@
       <v-container
         class="align-content-center fill-height"
       >
+
         <v-row
           class="justify-center"
         >
-        <h5
-          class="text-h5 mb-4 text-center font-weight-bold"
-        >
-          Book-Keeping made easy
-        </h5>
+          <h5
+            class="text-h5 mb-4 text-center font-weight-bold"
+          >
+            Book-Keeping made easy
+          </h5>
           <v-card-text
             class="text-body-1 text-center pa-0"
           >
@@ -29,25 +30,24 @@
         </v-row>
 
         <v-row
-          class="justify-center mb-10"
+          class="justify-center my-10"
         >
 
-          <v-img
-            v-if="!reveal"
-            width="160px"
-            height="160px"
-            class="mx-11 my-7"
-          ></v-img>
-
-          <v-img
-            v-if="reveal2"
-            :src="require('@/assets/octagon.png')"
-            max-width="160px"
-            height="160px"
-            class="mx-11 my-7"
+        <v-card
+          flat
+          color="transparent"
+          width="300px"
+          height="160px"
+          class="mx-0 my-10 d-flex justify-center"
+        >
+          <v-expand-transition
+            origin="center center"
           >
-            <v-expand-transition
-              origin="center center"
+            <v-img
+              v-if="reveal"
+              :src="require('@/assets/octagon.png')"
+              max-width="160px"
+              height="160px"
             >
               <v-icon
                 class="d-flex justify-center align-content-center fill-height"
@@ -56,18 +56,25 @@
               >
                 mdi-send
               </v-icon>
-            </v-expand-transition>
-          </v-img>
+            </v-img>
+          </v-expand-transition>
+        </v-card>
 
-          <v-img
-            v-if="reveal"
-            :src="require('@/assets/octagon.png')"
-            max-width="160px"
-            height="160px"
-            class="mx-11 my-7"
+        <v-card
+          flat
+          color="transparent"
+          width="300px"
+          height="160px"
+          class="mx-0 my-10 d-flex justify-center"
+        >
+          <v-expand-transition
+            origin="center center"
           >
-            <v-expand-transition
-              origin="center center"
+            <v-img
+              v-if="reveal2"
+              :src="require('@/assets/octagon.png')"
+              max-width="160px"
+              height="160px"
             >
               <v-icon
                 class="d-flex justify-center align-content-center fill-height"
@@ -76,18 +83,25 @@
               >
               mdi-currency-usd
               </v-icon>
-            </v-expand-transition>
-          </v-img>
+            </v-img>
+          </v-expand-transition>
+        </v-card>
 
-          <v-img
-            v-if="reveal3"
-            :src="require('@/assets/octagon.png')"
-            max-width="160px"
-            height="160px"
-            class="mx-11 my-7"
+        <v-card
+          flat
+          color="transparent"
+          width="300px"
+          height="160px"
+          class="mx-0 my-10 d-flex justify-center"
+        >
+          <v-expand-transition
+            origin="center center"
           >
-            <v-expand-transition
-              origin="center center"
+            <v-img
+              v-if="reveal3"
+              :src="require('@/assets/octagon.png')"
+              max-width="160px"
+              height="160px"
             >
               <v-icon
                 class="d-flex justify-center align-content-center fill-height"
@@ -96,11 +110,11 @@
               >
               mdi-wallet
               </v-icon>
-            </v-expand-transition>
-          </v-img>
+            </v-img>
+          </v-expand-transition>
+        </v-card>
 
         </v-row>
-
 
       </v-container>
     </v-img>
@@ -122,10 +136,11 @@ export default {
   methods: {
     revealIcons() {
       var section = document.getElementById('bookkeeping');
-      if(section.offsetTop < window.scrollY + section.scrollHeight) {
-        this.reveal = true;
-        setTimeout(() => this.reveal2 = true, 300);
-        setTimeout(() => this.reveal3 = true, 600);
+      var windowBottom = window.scrollY + window.innerHeight;
+      if(section.offsetTop + 500 < windowBottom) {
+        setTimeout(() => this.reveal = true, 100);
+        setTimeout(() => this.reveal2 = true, 600);
+        setTimeout(() => this.reveal3 = true, 1100);
       }
     }
   },
