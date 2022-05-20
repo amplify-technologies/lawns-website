@@ -1,6 +1,8 @@
 <template>
   <v-sheet
+    id="bookkeeping"
     color="background_grey"
+    v-scroll="revealIcons"
   >
     <v-img
       :src="require('@/assets/book_keep.png')"
@@ -29,49 +31,72 @@
         <v-row
           class="justify-center mb-10"
         >
+
           <v-img
+            v-if="!reveal"
+            width="160px"
+            height="160px"
+            class="mx-11 my-7"
+          ></v-img>
+
+          <v-img
+            v-if="reveal2"
             :src="require('@/assets/octagon.png')"
             max-width="160px"
-            max-height="160px"
+            height="160px"
             class="mx-11 my-7"
           >
-            <v-icon
-              class="d-flex justify-center align-content-center fill-height"
-              size="60"
-              color="primary"
+            <v-expand-transition
+              origin="center center"
             >
-              mdi-send
-            </v-icon>
+              <v-icon
+                class="d-flex justify-center align-content-center fill-height"
+                size="60"
+                color="primary"
+              >
+                mdi-send
+              </v-icon>
+            </v-expand-transition>
           </v-img>
 
           <v-img
+            v-if="reveal"
             :src="require('@/assets/octagon.png')"
             max-width="160px"
-            max-height="160px"
+            height="160px"
             class="mx-11 my-7"
           >
-            <v-icon
-              class="d-flex justify-center align-content-center fill-height"
-              size="60"
-              color="primary"
+            <v-expand-transition
+              origin="center center"
             >
-            mdi-currency-usd
-            </v-icon>
-        </v-img>
+              <v-icon
+                class="d-flex justify-center align-content-center fill-height"
+                size="60"
+                color="primary"
+              >
+              mdi-currency-usd
+              </v-icon>
+            </v-expand-transition>
+          </v-img>
 
           <v-img
+            v-if="reveal3"
             :src="require('@/assets/octagon.png')"
             max-width="160px"
-            max-height="160px"
+            height="160px"
             class="mx-11 my-7"
           >
-            <v-icon
-              class="d-flex justify-center align-content-center fill-height"
-              size="60"
-              color="primary"
+            <v-expand-transition
+              origin="center center"
             >
-            mdi-wallet
-            </v-icon>
+              <v-icon
+                class="d-flex justify-center align-content-center fill-height"
+                size="60"
+                color="primary"
+              >
+              mdi-wallet
+              </v-icon>
+            </v-expand-transition>
           </v-img>
 
         </v-row>
@@ -84,7 +109,30 @@
 
 <script>
 export default {
-  name: "BookkeepingPage"
+  name: "BookkeepingPage",
+
+  data() {
+    return {
+      reveal: false,
+      reveal2: false,
+      reveal3: false,
+    }
+  },
+
+  methods: {
+    revealIcons() {
+      var section = document.getElementById('bookkeeping');
+      if(section.offsetTop < window.scrollY + section.scrollHeight) {
+        this.reveal = true;
+        setTimeout(() => this.reveal2 = true, 300);
+        setTimeout(() => this.reveal3 = true, 600);
+      }
+    }
+  },
+
+  mounted() {
+    this.revealIcons()
+  }
 }
 </script>
 
