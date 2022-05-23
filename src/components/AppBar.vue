@@ -3,7 +3,6 @@
     absolute
     color="transparent"
     elevation=0
-    hide-on-scroll
     class="pt-5 px-sm-16"
   >
 
