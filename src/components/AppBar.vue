@@ -22,7 +22,7 @@
       color="white"
       class="text-capitalize ma-2 d-none d-md-block"
       width="120px"
-      @click="$vuetify.goTo('#features', {duration: 0})"
+      @click="$vuetify.goTo('#features', scrollOptions)"
     >Features</v-btn>
 
     <v-btn
@@ -31,7 +31,7 @@
       color="white"
       class="text-capitalize ma-2 d-none d-md-block"
       width="120px"
-      @click="$vuetify.goTo('#pricing', {duration: 0})"
+      @click="$vuetify.goTo('#pricing', scrollOptions)"
     >Pricing</v-btn>
 
     <v-btn
@@ -51,6 +51,16 @@
 
 <script>
 export default {
-  name: "AppBar"
+  name: "AppBar",
+
+  data() {
+    return {
+      scrollOptions: {
+        duration: 500,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      }
+    }
+  }
 }
 </script>

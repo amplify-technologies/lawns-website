@@ -34,7 +34,7 @@
               outlined
               class="text-capitalize"
               width="140"
-              @click="$vuetify.goTo('#pricing', { duration: 0 })"
+              @click="$vuetify.goTo('#pricing', scrollOptions)"
               >Pricing</v-btn
             >
           </v-card>
@@ -48,7 +48,15 @@
 export default {
   name: "SplashPage",
 
-  data: () => ({}),
+  data() {
+    return {
+      scrollOptions: {
+        duration: 500,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      }
+    }
+  }
 };
 </script>
 
