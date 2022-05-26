@@ -25,7 +25,12 @@
               will get you there
             </p>
 
-            <v-btn light class="mr-5 text-capitalize" width="140">
+            <v-btn
+              light
+              class="mr-5 text-capitalize"
+              width="140"
+              href="https://prod-lawns.web.app/"
+            >
               Open Amplify
               <v-icon>mdi-open-in-new</v-icon>
             </v-btn>
@@ -53,10 +58,10 @@ export default {
       scrollOptions: {
         duration: 500,
         offset: 0,
-        easing: 'easeInOutCubic',
-      }
-    }
-  }
+        easing: "easeInOutCubic",
+      },
+    };
+  },
 };
 </script>
 

@@ -1,11 +1,5 @@
 <template>
-  <v-app-bar
-    absolute
-    color="transparent"
-    elevation=0
-    class="pt-5 px-sm-16"
-  >
-
+  <v-app-bar absolute color="transparent" elevation="0" class="pt-5 px-sm-16">
     <v-img
       :src="require('@/assets/amplify_logo.svg')"
       max-height="40"
@@ -13,7 +7,7 @@
       contain
       position="left"
     />
-    
+
     <v-spacer></v-spacer>
 
     <v-btn
@@ -23,7 +17,8 @@
       class="text-capitalize ma-2 d-none d-md-block"
       width="120px"
       @click="$vuetify.goTo('#features', scrollOptions)"
-    >Features</v-btn>
+      >Features</v-btn
+    >
 
     <v-btn
       x-large
@@ -32,20 +27,22 @@
       class="text-capitalize ma-2 d-none d-md-block"
       width="120px"
       @click="$vuetify.goTo('#pricing', scrollOptions)"
-    >Pricing</v-btn>
+      >Pricing</v-btn
+    >
 
     <v-btn
       x-large
       text
       color="white"
-      class="text-capitalize ma-2 d-none d-sm-block"
+      class="text-capitalize ma-2 d-none d-sm-flex"
       width="120px"
-    >Sign In</v-btn>
+      href="https://prod-lawns.web.app/"
+      >Sign In</v-btn
+    >
 
-    <v-btn
-      class="text-capitalize ma-2"
-    >Try for free</v-btn>
-
+    <v-btn class="text-capitalize ma-2" href="https://prod-lawns.web.app/"
+      >Try for free</v-btn
+    >
   </v-app-bar>
 </template>
 
@@ -58,9 +55,9 @@ export default {
       scrollOptions: {
         duration: 500,
         offset: 0,
-        easing: 'easeInOutCubic',
-      }
-    }
-  }
-}
+        easing: "easeInOutCubic",
+      },
+    };
+  },
+};
 </script>
