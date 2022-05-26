@@ -21,6 +21,7 @@
           >
             <v-card-title class="justify-center font-weight-bold">
               Free Trial
+              <v-chip label class="ml-2" color="secondary">In Beta</v-chip>
             </v-card-title>
 
             <v-card-text
@@ -30,11 +31,18 @@
             </v-card-text>
 
             <v-card-text class="px-9 text-body-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
+              Gain access to the full amplify project with the acception that
+              amplify is in beta
+              <v-chip label x-small>awaiting copywork</v-chip>
             </v-card-text>
 
-            <v-spacer></v-spacer>
+            <v-spacer />
+
+            <v-card-subtitle>
+              Stripe API will take a 2.9% and 30 cents from transactions within
+              the app
+              <v-chip label x-small>awaiting copywork</v-chip>
+            </v-card-subtitle>
 
             <v-card-actions class="justify-center">
               <v-btn
@@ -55,6 +63,7 @@
           >
             <v-card-title class="justify-center font-weight-bold">
               All Features
+              <v-chip label class="ml-2" color="secondary">In Beta</v-chip>
             </v-card-title>
 
             <v-card-text
@@ -64,10 +73,9 @@
             </v-card-text>
 
             <v-card-text class="px-9 text-body-1">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
+              Gain access to the full amplify project with the acception that
+              amplify is in beta
+              <v-chip label x-small>awaiting copywork</v-chip>
             </v-card-text>
 
             <v-spacer></v-spacer>

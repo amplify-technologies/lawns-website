@@ -24,24 +24,19 @@
       x-large
       text
       color="white"
-      class="text-capitalize ma-2 d-none d-md-block"
-      width="120px"
+      class="text-capitalize ma-2 d-none d-md-block text-decoration-underline"
       @click="$vuetify.goTo('#pricing', scrollOptions)"
-      >Pricing</v-btn
+      >Apply for Beta Testing</v-btn
     >
 
     <v-btn
       x-large
       text
-      color="white"
-      class="text-capitalize ma-2 d-none d-sm-flex"
-      width="120px"
+      class="text-capitalize ma-2"
       href="https://prod-lawns.web.app/"
-      >Sign In</v-btn
     >
-
-    <v-btn class="text-capitalize ma-2" href="https://prod-lawns.web.app/"
-      >Try for free</v-btn
+      <v-icon class="mr-2">mdi-login</v-icon>
+      Sign In</v-btn
     >
   </v-app-bar>
 </template>
