@@ -24,7 +24,7 @@
       x-large
       text
       color="white"
-      class="text-capitalize ma-2 d-none d-md-block text-decoration-underline"
+      class="text-capitalize ma-2 d-none d-md-block"
       @click="$vuetify.goTo('#pricing', scrollOptions)"
       >Apply for Beta Testing</v-btn
     >
@@ -32,6 +32,7 @@
     <v-btn
       x-large
       text
+      dark
       class="text-capitalize ma-2"
       href="https://prod-lawns.web.app/"
     >
