@@ -1,6 +1,7 @@
 <template>
   <v-img
-    id="features" :src="require('@/assets/features.png')"
+    id="features"
+    :src="require('@/assets/features.png')"
     :max-height="$vuetify.breakpoint.mdAndUp ? 700 : 'initial'"
   >
     <v-container class="align-content-center fill-height">
@@ -9,12 +10,16 @@
       >
       <v-card-text class="text-body mb-10 text-justify">
         Amplify lets you create Jobs from templates, assign clients to them,
-        schedule when they happen, and send invoices when they’re done. On top of
-        that it comes with in-app messaging to keep in touch with your
+        schedule when they happen, and send invoices when they’re done. On top
+        of that it comes with in-app messaging to keep in touch with your
         customers.
       </v-card-text>
       <v-row fluid>
-        <v-col cols="6" md="8" class="d-none d-sm-flex flex-column justify-center">
+        <v-col
+          cols="6"
+          md="8"
+          class="d-none d-sm-flex flex-column justify-center"
+        >
           <v-row no-gutters>
             <v-col
               v-for="(item, i) in features"
@@ -55,7 +60,11 @@
             v-model="carousel"
             :height="$vuetify.breakpoint.xs ? '250px' : '100%'"
           >
-            <v-carousel-item v-for="(item, i) in features" :key="i" width="100%">
+            <v-carousel-item
+              v-for="(item, i) in features"
+              :key="i"
+              width="100%"
+            >
               <v-card
                 class="d-flex flex-column align-center justify-start justify-sm-center"
                 :outlined="!$vuetify.breakpoint.xs"
@@ -77,7 +86,11 @@
       <v-row class="justify-center justify-sm-start">
         <v-card-subtitle class="text-no-wrap">
           <v-icon>mdi-gesture-tap</v-icon>
-          {{$vuetify.breakpoint.xs ? 'Swipe to view features' : 'Click feature for more info'}}
+          {{
+            $vuetify.breakpoint.xs
+              ? "Swipe to view features"
+              : "Click feature for more info"
+          }}
         </v-card-subtitle>
       </v-row>
     </v-container>
@@ -91,33 +104,33 @@ export default {
     return {
       features: [
         {
-          title: "Scheduler",
-          desc: "Keep track of all jobs, edit details and see who's doing what.",
+          title: "Job Scheduler",
+          desc: "Keep track of your upcoming jobs and easily details",
           icon: "mdi-calendar-blank",
         },
         {
           title: "In App Messages",
-          desc: "Allows you to communicate with customers via SMS, Email, or on-site chat",
+          desc: "Easily communicate with your customers from inside the App, Keep messages connected to specific Jobs",
           icon: "mdi-forum",
         },
         {
           title: "Invoicing",
-          desc: "Easily send invoices to your clients, In App or, by Email",
+          desc: "Easily send invoices to your customers; They will receive email or text notification of new invoice",
           icon: "mdi-receipt",
         },
         {
           title: "Easy Transaction",
-          desc: "Your company will have its own transaction system via Stripe API",
+          desc: "You will be able to accept credit/debit card payments via the Stripe API (Read more about Stripe)",
           icon: "mdi-credit-card",
         },
         {
           title: "Fast Collections",
-          desc: "(Need a description)",
+          desc: "Get your money faster with immediate invoicing that lets your customers easily pay by credit/debit card.",
           icon: "mdi-puzzle",
         },
         {
-          title: "Organize Clients",
-          desc: "Our system allows you to create Clients, add all thier details, and quickly make jobs under their name",
+          title: "Organize Customers",
+          desc: "Create and edit Customers; Add mowing-specific details (including options for multiple locations for one Customer)",
           icon: "mdi-clipboard-account",
         },
       ],

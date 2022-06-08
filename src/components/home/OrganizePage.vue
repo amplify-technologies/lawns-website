@@ -15,7 +15,7 @@
               Organize and Schedule
             </p>
             <v-card-text>
-              Write out and complete all your Jobs from start to finish
+              Create Jobs on the fly and track Jobs from start to finish
             </v-card-text>
           </div>
         </v-col>
@@ -69,9 +69,9 @@
               Customer Service at its best.
             </p>
             <v-card-text>
-              Our system manages client to client messages so your customers
-              won't ever be left uninformed. Amplify comes with email
-              notifications to keep everyone on track
+              Contractor-to-Customer messaging so your Customers won't ever be
+              left uninformed; Amplify Lawns delivers email notifications to
+              your Customers to keep everyone in the loop
             </v-card-text>
           </div>
         </v-col>
