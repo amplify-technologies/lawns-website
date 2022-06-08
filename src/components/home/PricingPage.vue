@@ -30,19 +30,15 @@
               <span class="text-h4 font-weight-medium">$0</span> for 30 days
             </v-card-text>
 
-            <v-card-text class="px-9 text-body-1">
-              Gain access to the full amplify project with the acception that
-              amplify is in beta
-              <v-chip label x-small>awaiting copywork</v-chip>
-            </v-card-text>
+            <v-list-item v-for="i in freeTier" :key="i" dense>
+              <v-list-icon>
+                <v-icon>mdi-circle-small</v-icon>
+              </v-list-icon>
+              {{ i }}
+            </v-list-item>
+            <v-list-item />
 
-            <v-spacer />
-
-            <v-card-subtitle>
-              Stripe API will take a 2.9% and 30 cents from transactions within
-              the app
-              <v-chip label x-small>awaiting copywork</v-chip>
-            </v-card-subtitle>
+            <!-- <v-chip label x-small>awaiting copywork</v-chip> -->
 
             <v-card-actions class="justify-center">
               <v-btn
@@ -72,13 +68,13 @@
               <span class="text-h4 font-weight-medium">$11</span> /month
             </v-card-text>
 
-            <v-card-text class="px-9 text-body-1">
-              Gain access to the full amplify project with the acception that
-              amplify is in beta
-              <v-chip label x-small>awaiting copywork</v-chip>
-            </v-card-text>
-
-            <v-spacer></v-spacer>
+            <v-list-item v-for="i in paidTier" :key="i">
+              <v-list-icon>
+                <v-icon>mdi-circle-small</v-icon>
+              </v-list-icon>
+              {{ i }}
+            </v-list-item>
+            <v-list-item />
 
             <v-card-actions class="justify-center">
               <v-btn
@@ -91,6 +87,13 @@
               </v-btn>
             </v-card-actions>
           </v-card>
+          <v-sheet dark color="transparent">
+            <v-card-subtitle>
+              Stripe API will take a 2.9% and 30 cents from transactions within
+              the app
+              <v-chip label x-small>awaiting copywork</v-chip>
+            </v-card-subtitle>
+          </v-sheet>
         </v-row>
       </v-container>
     </v-img>
@@ -100,5 +103,21 @@
 <script>
 export default {
   name: "pricingPage",
+  data: () => ({
+    freeTier: [
+      "Get all the features free for 30 days",
+      "Organize your lawn business",
+      "Collect your $$ faster",
+      "Communicate with Customers",
+      "Increase Customer satisfaction with easy to use Customer Portal",
+    ],
+    paidTier: [
+      "Lifetime access for active BETA Testers at $0 cost",
+      "Organize your lawn business",
+      "Collect your $$ faster",
+      "Communicate with Customers",
+      "Increase Customer satisfaction with easy to use Customer Portal",
+    ],
+  }),
 };
 </script>

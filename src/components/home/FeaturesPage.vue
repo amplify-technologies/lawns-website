@@ -104,8 +104,8 @@ export default {
     return {
       features: [
         {
-          title: "Scheduler",
-          desc: "Keep track of all jobs, edit details and see who's doing what.",
+          title: "Job Scheduler",
+          desc: "Keep track of your upcoming jobs and easily details",
           icon: "mdi-calendar-blank",
         },
         {
@@ -125,12 +125,12 @@ export default {
         },
         {
           title: "Fast Collections",
-          desc: "(Need a description)",
+          desc: "Get your money faster with immediate invoicing that lets your customers easily pay by credit/debit card.",
           icon: "mdi-puzzle",
         },
         {
-          title: "Organize Clients",
-          desc: "Our system allows you to create Clients, add all thier details, and quickly make jobs under their name",
+          title: "Organize Customers",
+          desc: "Create and edit Customers; Add mowing-specific details (including options for multiple locations for one Customer)",
           icon: "mdi-clipboard-account",
         },
       ],
