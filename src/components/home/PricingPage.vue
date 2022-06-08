@@ -87,11 +87,12 @@
               </v-btn>
             </v-card-actions>
           </v-card>
+        </v-row>
+        <v-row class="justify-center">
           <v-sheet dark color="transparent">
             <v-card-subtitle>
               Stripe API processing fees 3.4% plus 30 cents per transaction and
               25 cents per daily payout.
-              <v-chip label x-small>awaiting copywork</v-chip>
             </v-card-subtitle>
           </v-sheet>
         </v-row>
