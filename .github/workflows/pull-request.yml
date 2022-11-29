@@ -55,6 +55,7 @@ jobs:
           REGISTRY_USER: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
         run: |
           echo $ID_RSA > key.txt
+          chmod 600 key.txt
           apk update && apk add openssh-client && apk add curl
           ssh -i key.txt -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin && docker pull ghcr.io/$github.repository"
           ssh -i key.txt -o StrictHostKeyChecking=no "$USER@$IP" "docker container rm -f amplify || true"
