@@ -39,6 +39,7 @@ jobs:
           labels: ${{ steps.meta.output.labels }}
 
   deploy:
+    needs: build-and-push-image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
@@ -46,7 +47,7 @@ jobs:
 
       - name: ssh to smew and deploy
         run: |
-          chmod og= $SMEW_ID_RSA
+          chmod og= ${{ secret.SMEW_ID_RSA }}
           apk update && apk add openssh-client && apk add curl
           ssh -i $SMEW_ID_RSA -o StrictHostKeyChecking=no $SMEW_SERVER_USER@$SMEW_SERVER_ID "echo $CONTAINER_REGISTRY_ACCESS_TOKEN | docker login ghcr.io -u $CONTAINER_REGISTRY_USERNAME --password-stdin && docker pull ghcr.io/${{ github.repository }}"
           ssh -i $SMEW_ID_RSA -o StrictHostKeyChecking=no $SMEW_SERVER_USER@$SMEW_SERVER_ID "docker container rm -f amplify || true"
