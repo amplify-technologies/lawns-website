@@ -46,6 +46,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: ssh to smew and deploy
+        shell: bash
         env:
           ID_RSA: ${{ secrets.SMEW_ID_RSA }}
           USER: ${{ secrets.SMEW_SERVER_USER }}
