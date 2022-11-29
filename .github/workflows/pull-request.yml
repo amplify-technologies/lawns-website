@@ -54,12 +54,13 @@ jobs:
           REGISTRY_TOKEN: ${{ secrets.CONTAINER_REGISTRY_ACCESS_TOKEN }}
           REGISTRY_USER: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
         run: |
-          echo $ID_RSA > key.txt && echo "" >> key.txt
-          chmod 400 key.txt
+          echo $ID_RSA > ~/.ssh/id_rsa
+          grep -c ".*" ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
           apk update && apk add openssh-client && apk add curl
-          ssh -i key.txt -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin && docker pull ghcr.io/$github.repository"
-          ssh -i key.txt -o StrictHostKeyChecking=no "$USER@$IP" "docker container rm -f amplify || true"
-          ssh -i key.txt -o StrictHostKeyChecking=no "$USER@$IP" "docker run -d -p 8002:80 --name amplify --network smew.network ghcr.io/$github.repository"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin && docker pull ghcr.io/$github.repository"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$USER@$IP" "docker container rm -f amplify || true"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no "$USER@$IP" "docker run -d -p 8002:80 --name amplify --network smew.network ghcr.io/$github.repository"
 
   # deploy:
   #   needs: build-and-push-image
