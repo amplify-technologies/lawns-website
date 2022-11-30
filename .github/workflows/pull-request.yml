@@ -56,10 +56,10 @@ jobs:
       - name: adding known hosts
         run: ssh-keyscan -H ${{ secrets.SMEW_SERVER_ID }} >> ~/.ssh/known_hosts
 
-      - name: install open ssh client
-        run: apk update
-          apk add openssh-client
-          apk add curl
+      # - name: install open ssh client
+      #   run: apk update
+      #     apk add openssh-client
+      #     apk add curl
 
       - name: login to github container registry
         run: ssh -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin"
