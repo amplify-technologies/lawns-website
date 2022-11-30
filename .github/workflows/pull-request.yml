@@ -41,6 +41,11 @@ jobs:
   deploy:
     needs: build-and-push-image
     runs-on: ubuntu-latest
+    env:
+      USER: ${{ secrets.SMEW_SERVER_USER }}
+      IP: ${{ secrets.SMEW_SERVER_ID }}
+      REGISTRY_TOKEN: ${{ secrets.CONTAINER_REGISTRY_ACCESS_TOKEN }}
+      REGISTRY_USER: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
     steps:
       - name: install ssh key
         uses: shimataro/ssh-key-action@v2
@@ -51,17 +56,19 @@ jobs:
       - name: adding known hosts
         run: ssh-keyscan -H ${{ secrets.SMEW_SERVER_ID }} >> ~/.ssh/known_hosts
 
-      - name: ssh to smew and deploy
-        shell: bash
-        env:
-          USER: ${{ secrets.SMEW_SERVER_USER }}
-          IP: ${{ secrets.SMEW_SERVER_ID }}
-          REGISTRY_TOKEN: ${{ secrets.CONTAINER_REGISTRY_ACCESS_TOKEN }}
-          REGISTRY_USER: ${{ secrets.CONTAINER_REGISTRY_USERNAME }}
+      - name: install open ssh client
+        run: apk update
+          apk add openssh-client
+          apk add curl
+
+      - name: login to github container registry
+        run: ssh -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin"
+
+      - name: pull latest image
+        run: ssh -o StrictHostKeyChecking=no "$USER@$IP" "docker pull ghcr.io/$github.repository"
+
+      - name: stop and restart container
         run: |
-          apk update && apk add openssh-client && apk add curl
-          ssh -o StrictHostKeyChecking=no "$USER@$IP" "echo "$REGISTRY_TOKEN" | docker login ghcr.io -u "$REGISTRY_USER" --password-stdin"
-          ssh -o StrictHostKeyChecking=no "$USER@$IP" "docker pull ghcr.io/$github.repository"
           ssh -o StrictHostKeyChecking=no "$USER@$IP" "docker container rm -f amplify || true"
           ssh -o StrictHostKeyChecking=no "$USER@$IP" "docker run -d -p 8002:80 --name amplify --network smew.network ghcr.io/$github.repository"
 
