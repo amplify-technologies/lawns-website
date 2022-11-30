@@ -1,24 +1,23 @@
-# cgs
+# Amplify's Marketing Website
 
-## Project setup
-```
-yarn install
-```
+Built with `Vuejs` and `Vuetify`
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Running the Project
 
-### Compiles and minifies for production
+Install Packages...
+
 ```
-yarn build
+npm install
 ```
 
-### Lints and fixes files
+Complile and run with...
+
 ```
-yarn lint
+npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Resources
+
+[Vue Docs](https://v2.vuejs.org/v2/guide/) |
+[Vuetify Reference](https://vuetifyjs.com/en/introduction/why-vuetify/) |
+[Handy Material Icon Browser!](https://github.com/Pictogrammers/Browser-Icon-Picker)
